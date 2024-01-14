@@ -1,0 +1,688 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".RabbitBreedingActivity"
+    android:padding="10dp">
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/firstCV"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:cardCornerRadius="12dp"
+            android:elevation="20dp"
+            app:cardBackgroundColor="@color/white">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <TextView
+                    android:id="@+id/textViewBuck"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Sire"
+                    android:textStyle="bold"
+                    android:textSize="30sp"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginEnd="10dp"
+                    android:layout_marginStart="10dp"/>
+                <Button
+                    android:id="@+id/btnBreedingBuckSelect"
+                    android:layout_width="80dp"
+                    android:layout_height="35dp"
+                    android:text="Select"
+                    android:textSize="9sp"
+                    android:layout_toEndOf="@id/textViewBuck"
+                    android:layout_marginTop="25dp"
+                    android:layout_marginEnd="80dp"
+                    android:background="@drawable/custom_button"
+                    app:backgroundTint="@null"/>
+
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/buckCardView"
+                    android:layout_below="@id/btnBreedingBuckSelect"
+                    android:layout_width="170dp"
+                    android:layout_height="wrap_content"
+                    app:cardCornerRadius="12dp"
+                    android:elevation="20dp"
+                    app:cardBackgroundColor="@color/light_gray"
+                    android:layout_marginStart="5dp"
+                    android:layout_marginTop="10dp">
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:padding="6dp">
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Name: "
+                                android:textSize="14sp"/>
+
+                            <TextView
+                                android:id="@+id/textRabbitBreedingNameBuck"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:textSize="14sp"/>
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Origin: "
+                                android:textSize="14sp"/>
+
+                            <TextView
+                                android:id="@+id/textRabbitBreedingOriginBuck"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:textSize="14sp"/>
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Breed: "
+                                android:textSize="14sp"/>
+
+                            <TextView
+                                android:id="@+id/textRabbitBreedingBreedBuck"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:textSize="14sp"/>
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Status: "
+                                android:textSize="14sp"/>
+
+                            <TextView
+                                android:id="@+id/textRabbitBreedingStatusBuck"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:textSize="14sp"/>
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Kits: "
+                                android:textSize="14sp"/>
+
+                            <TextView
+                                android:id="@+id/textRabbitBreedingAccumulatedKitsBuck"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:textSize="14sp"/>
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Success Rate: "
+                                android:textSize="14sp"/>
+
+                            <TextView
+                                android:id="@+id/textRabbitBreedingSuccessRateBuck"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:textSize="14sp"/>
+                        </LinearLayout>
+
+                    </LinearLayout>
+                </androidx.cardview.widget.CardView>
+
+                <ImageButton
+                    android:id="@+id/btnBreedingValidateBreedLinage"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:background="@color/transparent"
+                    android:layout_toEndOf="@+id/buckCardView"
+                    android:layout_below="@id/btnBreedingValidateBreedLinageEnabler"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginStart="10dp"
+                    android:src="@drawable/breeding_validation_icon"
+                    android:visibility="gone"/>
+
+                <ImageButton
+                    android:id="@+id/btnBreedingValidateBreedLinageEnabler"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_toEndOf="@+id/buckCardView"
+                    android:layout_toStartOf="@+id/doeCardView"
+                    android:layout_marginTop="100dp"
+                    android:background="@color/transparent"
+                    android:layout_marginStart="10dp"
+                    android:src="@drawable/rabbit_breeding_validator_enabler"
+                    android:visibility="gone"/>
+
+                <TextView
+                    android:id="@+id/textViewDoe"
+                    android:layout_toEndOf="@id/btnBreedingBuckSelect"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="30sp"
+                    android:text="Dam"
+                    android:textStyle="bold"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginEnd="10dp"/>
+                <Button
+                    android:id="@+id/btnBreedingDoeSelect"
+                    android:layout_width="80dp"
+                    android:layout_height="35dp"
+                    android:text="Select"
+                    android:textSize="9sp"
+                    android:layout_toEndOf="@id/textViewDoe"
+                    android:layout_marginTop="25dp"
+                    android:background="@drawable/custom_button"
+                    app:backgroundTint="@null"/>
+
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/doeCardView"
+                    android:layout_below="@id/btnBreedingDoeSelect"
+                    android:layout_toEndOf="@id/btnBreedingValidateBreedLinage"
+                    android:layout_width="170dp"
+                    android:layout_height="wrap_content"
+                    app:cardCornerRadius="12dp"
+                    android:elevation="20dp"
+                    app:cardBackgroundColor="@color/light_gray"
+                    android:layout_marginStart="37dp"
+                    android:layout_marginTop="10dp">
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:padding="6dp">
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Name: "
+                                android:textSize="14sp"/>
+
+                            <TextView
+                                android:id="@+id/textRabbitBreedingNameDoe"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:textSize="14sp"/>
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Origin: "
+                                android:textSize="14sp"/>
+
+                            <TextView
+                                android:id="@+id/textRabbitBreedingOriginDoe"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:textSize="14sp"/>
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Breed: "
+                                android:textSize="14sp"/>
+
+                            <TextView
+                                android:id="@+id/textRabbitBreedingBreedDoe"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:textSize="14sp"/>
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Status: "
+                                android:textSize="14sp"/>
+
+                            <TextView
+                                android:id="@+id/textRabbitBreedingStatusDoe"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:textSize="14sp"/>
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Kits: "
+                                android:textSize="14sp"/>
+
+                            <TextView
+                                android:id="@+id/textRabbitBreedingAccumulatedKitsDoe"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:textSize="14sp"/>
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Success Rate: "
+                                android:textSize="14sp"/>
+
+                            <TextView
+                                android:id="@+id/textRabbitBreedingSuccessRateDoe"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:textSize="14sp"/>
+                        </LinearLayout>
+
+
+
+                    </LinearLayout>
+                </androidx.cardview.widget.CardView>
+
+
+                <TextView
+                    android:id="@+id/textViewStudDate"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/buckCardView"
+                    android:text="Stud Date"
+                    android:textSize="15sp"
+                    android:textStyle="bold"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginStart="20dp"/>
+                <Button
+                    android:id="@+id/btnBreedingStudDate"
+                    android:layout_width="160dp"
+                    android:layout_height="wrap_content"
+                    android:text="Pick Stud Date"
+                    android:textColor="@color/black"
+                    style="?android:spinnerStyle"
+                    android:layout_below="@id/textViewStudDate"
+                    android:layout_marginStart="10dp"
+                    app:backgroundTint="@color/pastel_light_blue"
+                    android:layout_marginBottom="10dp"/>
+
+                <TextView
+                    android:id="@+id/textViewStudResult"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/doeCardView"
+                    android:layout_toEndOf="@id/textViewStudDate"
+                    android:text="Stud Result"
+                    android:textSize="15sp"
+                    android:textStyle="bold"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginStart="120dp"/>
+                <Button
+                    android:id="@+id/btnBreedingStudResult"
+                    android:layout_width="170dp"
+                    android:layout_height="wrap_content"
+                    android:text="Pick Stud Result"
+                    android:textColor="@color/black"
+                    style="?android:spinnerStyle"
+                    android:layout_below="@id/textViewStudResult"
+                    android:layout_toEndOf="@id/btnBreedingStudDate"
+                    android:layout_marginStart="30dp"
+                    app:backgroundTint="@color/pastel_light_blue"
+                    android:layout_marginBottom="10dp"
+                    android:enabled="false"
+                    />
+            </RelativeLayout>
+
+        </androidx.cardview.widget.CardView>
+
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/secondCV"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:cardCornerRadius="12dp"
+            android:elevation="20dp"
+            app:cardBackgroundColor="@color/white"
+            android:layout_below="@+id/firstCV"
+            android:layout_marginTop="10dp">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <TextView
+                android:id="@+id/textViewWeightOfDoe"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Weight Of Dam"
+                android:textAlignment="center"
+                android:textSize="25sp"
+                android:textStyle="bold"
+                android:layout_marginTop="10dp"/>
+
+                <TextView
+                android:id="@+id/textViewBeforeStud"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/textViewWeightOfDoe"
+                android:text="Before Stud"
+                android:textSize="15sp"
+                android:textStyle="bold"
+                android:layout_marginTop="10dp"
+                android:layout_marginStart="15dp"/>
+
+                <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/layoutWeightBeforeStud"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:layout_width="150dp"
+                android:layout_height="90dp"
+                android:layout_below="@id/textViewBeforeStud"
+                app:startIconDrawable="@drawable/rabbit_id_icon"
+                android:layout_marginTop="1dp"
+                android:layout_marginStart="15dp">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/textBreedingBeforeStudWeight"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:enabled="false"
+                        android:importantForAutofill="noExcludeDescendants" />
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <TextView
+                android:id="@+id/textViewAfterStud"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/textViewWeightOfDoe"
+                android:layout_toEndOf="@id/textViewBeforeStud"
+                android:text="After 10 days from Stud"
+                android:textSize="15sp"
+                android:textStyle="bold"
+                android:layout_marginTop="10dp"
+                android:layout_marginStart="100dp"/>
+
+                <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/layoutAfterStud"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:layout_width="150dp"
+                android:layout_height="90dp"
+                android:layout_below="@id/textViewAfterStud"
+                android:layout_toEndOf="@id/layoutWeightBeforeStud"
+                android:layout_marginTop="1dp"
+                android:layout_marginStart="60dp"
+                app:endIconMode="clear_text"
+                app:startIconDrawable="@drawable/rabbit_id_icon"
+                app:counterMaxLength="2"
+                app:counterEnabled="true"
+                app:counterTextColor="@color/black">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/textBreedingAfterStudWeight"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:inputType="numberDecimal"
+                        android:enabled="false"
+                        android:text=""
+                        android:importantForAutofill="noExcludeDescendants" />
+
+                </com.google.android.material.textfield.TextInputLayout>
+            </RelativeLayout>
+        </androidx.cardview.widget.CardView>
+
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/thirdCV"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:cardCornerRadius="12dp"
+            android:elevation="20dp"
+            app:cardBackgroundColor="@color/white"
+            android:layout_below="@+id/secondCV"
+            android:layout_marginTop="10dp">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/layoutLitterSize"
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                    android:layout_width="150dp"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/btnBreedingDueDate"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginStart="15dp"
+                    android:hint="Size"
+                    app:endIconMode="clear_text"
+                    app:startIconDrawable="@drawable/rabbit_id_icon"
+                    app:counterMaxLength="2"
+                    app:counterEnabled="true"
+                    app:counterTextColor="@color/black">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/textBreedingLitterSize"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:inputType="numberDecimal"
+                        android:enabled="false"
+                        android:importantForAutofill="noExcludeDescendants" />
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/layoutSurvivedLitterSize"
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                    android:layout_width="150dp"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/btnBreedingDueDate"
+                    android:layout_toEndOf="@id/layoutLitterSize"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginStart="60dp"
+                    android:hint="Survived"
+                    app:endIconMode="clear_text"
+                    app:startIconDrawable="@drawable/rabbit_id_icon"
+                    app:counterMaxLength="2"
+                    app:counterEnabled="true"
+                    app:counterTextColor="@color/black">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/textBreedingSurvivedLitterSize"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:inputType="numberDecimal"
+                        android:enabled="false"
+                        android:importantForAutofill="noExcludeDescendants"/>
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <TextView
+                    android:id="@+id/textViewExpectedDate"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Litters Birth Date"
+                    android:textSize="20sp"
+                    android:textStyle="bold"
+                    android:layout_marginTop="10dp"
+                    android:textAlignment="center"/>
+                <Button
+                    android:id="@+id/btnBreedingDueDate"
+                    android:layout_width="150dp"
+                    android:layout_height="wrap_content"
+                    android:text="Pick Birth Date"
+                    android:textColor="@color/black"
+                    style="?android:spinnerStyle"
+                    android:enabled="false"
+                    android:layout_below="@id/textViewExpectedDate"
+                    android:layout_marginStart="15dp"
+                    app:backgroundTint="@color/pastel_light_blue"
+                    android:layout_centerHorizontal="true"/>
+            </RelativeLayout>
+        </androidx.cardview.widget.CardView>
+
+        <TextView
+            android:id="@+id/textViewDateAfterWeaning"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/thirdCV"
+            android:text="Date after weaning"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:layout_marginTop="10dp"
+            android:layout_marginStart="10dp"
+            android:layout_centerHorizontal="true" />
+
+        <Button
+            android:id="@+id/btnBreedingDateAfterWeaning"
+            style="?android:spinnerStyle"
+            android:layout_width="160dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/textViewDateAfterWeaning"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="0dp"
+            android:text="Pick Date"
+            android:enabled="false"
+            android:textColor="@color/black"
+            app:backgroundTint="@color/pastel_light_blue"
+            android:layout_centerHorizontal="true"/>
+
+        <Button
+            android:id="@+id/btnBreedingSubmit"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/btnBreedingDateAfterWeaning"
+            android:layout_marginTop="30dp"
+            android:background="@drawable/custom_button"
+            android:text="Submit"
+            app:iconGravity="textStart"
+            app:icon="@drawable/submit_icon"
+            android:textColor="@color/white"
+            app:backgroundTint="@null"
+            />
+
+        <Button
+            android:id="@+id/btnBreedingUpdate"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/btnBreedingSubmit"
+            android:layout_alignParentEnd="true"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/custom_button"
+            android:text="Update"
+            app:iconGravity="textStart"
+            app:icon="@drawable/update_icon"
+            android:textColor="@color/white"
+            app:backgroundTint="@null"
+            android:visibility="gone"/>
+
+        <Button
+            android:id="@+id/btnBreedingClear"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/btnBreedingUpdate"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/custom_button_viewer"
+            android:text="Clear Fields"
+            app:iconGravity="textStart"
+            app:icon="@drawable/clear_field_icon"
+            android:textColor="@color/white"
+            app:backgroundTint="@null" />
+
+        <Button
+            android:id="@+id/btnBreedingDelete"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/btnBreedingClear"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/custom_button_delete"
+            app:iconGravity="textStart"
+            app:icon="@drawable/delete_icon"
+            android:text="Delete"
+            android:textColor="@color/white"
+            app:backgroundTint="@null"
+            android:visibility="gone"/>
+
+        <Button
+            android:id="@+id/btnBreedingViewAll"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/btnBreedingDelete"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/custom_button_viewer"
+            android:text="View Rabbit Master List"
+            app:iconGravity="textStart"
+            app:icon="@drawable/view_all_list_icon"
+            android:textColor="@color/white"
+            app:backgroundTint="@null"
+            android:visibility="gone"/>
+
+    </RelativeLayout>
+
+
+</ScrollView>

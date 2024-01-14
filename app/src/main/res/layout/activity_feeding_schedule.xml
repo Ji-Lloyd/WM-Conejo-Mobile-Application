@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".FeedingScheduleActivity">
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cdFeedingScheduleText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:elevation="6dp"
+        app:cardCornerRadius="12dp"
+        android:layout_marginTop="100dp"
+        app:cardBackgroundColor="@color/dashboard_header">
+    <TextView
+        android:id="@+id/textRabbitFeedingSchedule"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Feeding Schedule"
+        android:layout_gravity="center"
+        android:textSize="40sp"
+        android:textStyle="bold"
+        android:textColor="@color/white"
+        android:layout_margin="5dp"
+        />
+    </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cdFeedingScheduleValue"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:elevation="6dp"
+        app:cardCornerRadius="12dp"
+        android:layout_marginTop="10dp"
+        app:cardBackgroundColor="@color/dashboard_header"
+        android:layout_below="@id/cdFeedingScheduleText">
+        <TextView
+            android:id="@+id/textRabbitFeedingScheduleValue"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:textColor="@color/white"
+            android:textSize="28sp"
+            android:layout_margin="1dp"
+            android:textStyle="bold"
+            />
+    </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cdSet"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_rowWeight="1"
+        android:layout_columnWeight="1"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@id/cdFeedingScheduleValue"
+        android:layout_margin="20dp"
+        android:elevation="6dp"
+        app:cardBackgroundColor="@color/white"
+        app:cardCornerRadius="12dp">
+
+        <ImageButton
+            android:id="@+id/btnRabbitFeedingScheduleSetter"
+            android:layout_width="150dp"
+            android:layout_height="150dp"
+            android:layout_centerHorizontal="true"
+            android:backgroundTint="@color/transparent"
+            android:layout_margin="20dp"
+            android:src="@drawable/feeding_schedule_alarm_setter" />
+    </androidx.cardview.widget.CardView>
+
+    <TextView
+        android:id="@+id/textFeedingScheduleAlarmSetter"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@id/cdSet"
+        android:text="Set schedule"
+        android:textSize="20sp"
+        android:textColor="@color/black"/>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cdCancel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_rowWeight="1"
+        android:layout_columnWeight="1"
+        android:layout_below="@id/textFeedingScheduleAlarmSetter"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="20dp"
+        android:elevation="6dp"
+        app:cardBackgroundColor="@color/white"
+        app:cardCornerRadius="12dp">
+
+        <ImageButton
+            android:id="@+id/btnRabbitFeedingScheduleCanceller"
+            android:layout_width="150dp"
+            android:layout_height="150dp"
+            android:layout_below="@id/textFeedingScheduleAlarmSetter"
+            android:layout_centerHorizontal="true"
+            android:layout_margin="20dp"
+            android:backgroundTint="@color/transparent"
+            android:src="@drawable/baseline_alarm_off_24" />
+    </androidx.cardview.widget.CardView>
+
+    <TextView
+        android:id="@+id/textFeedingScheduleAlarmCancel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@id/cdCancel"
+        android:text="Cancel schedule"
+        android:textSize="20sp"
+        android:textColor="@color/black"/>
+
+
+
+</RelativeLayout>

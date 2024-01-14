@@ -1,0 +1,262 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".RabbitHealthActivity"
+    android:padding="10dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="30dp">
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/layoutHealthID"
+                android:layout_width="150dp"
+                android:layout_height="wrap_content"
+                app:endIconMode="clear_text"
+                android:hint="ID"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                app:startIconDrawable="@drawable/rabbit_id_icon"
+                android:layout_marginTop="20dp"
+                android:layout_marginEnd="20dp"
+                android:enabled="false">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/textHealthRabbitID"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:importantForAutofill="noExcludeDescendants"
+                    android:enabled="false"/>
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <Button
+                android:id="@+id/btnHealthRabbitGenerateID"
+                android:layout_width="120dp"
+                android:layout_height="wrap_content"
+                android:background="@drawable/custom_button"
+                android:text="Generate"
+                app:iconGravity="textStart"
+                android:textColor="@color/white"
+                android:textSize="13sp"
+                android:layout_marginTop="15dp"
+                app:backgroundTint="@null"
+                android:visibility="gone"/>
+
+        </LinearLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/layoutHealthAdministrationSelection"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:startIconDrawable="@drawable/rabbit_gender"
+            android:hint="Health Administration For:"
+            android:layout_marginTop="20dp"
+            style="@style/Widget.MaterialComponents.TextInputLayout.FilledBox.Dense.ExposedDropdownMenu"
+            android:enabled="false">
+
+            <AutoCompleteTextView
+                android:id="@+id/dropDownHealthAdministrationCategory"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:inputType="none"/>
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <Button
+            android:id="@+id/btnHealthDewormingDatePicker"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/layoutFeedSchedule"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/custom_date_button"
+            android:text="Pick Date"
+            android:textColor="#01181d"
+            android:visibility="gone"
+            app:backgroundTint="@null" />
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/layoutName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:startIconDrawable="@drawable/rabbit_icon"
+            app:endIconMode="clear_text"
+            android:hint="Name"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            android:layout_marginTop="10dp">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/textHealthRabbitName"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:importantForAutofill="noExcludeDescendants" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/layoutStatus"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:startIconDrawable="@drawable/rabbit_status"
+            app:endIconMode="clear_text"
+            android:hint="Status"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            android:layout_marginTop="10dp"
+            android:enabled="false">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/textHealthRabbitStatus"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:importantForAutofill="noExcludeDescendants" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/layoutHealthDiseaseOutbreaks"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:startIconDrawable="@drawable/rabbit_disease"
+            android:hint="Disease Outbreak / Illness"
+            android:layout_marginTop="10dp"
+            style="@style/Widget.MaterialComponents.TextInputLayout.FilledBox.Dense.ExposedDropdownMenu"
+            >
+
+            <AutoCompleteTextView
+                android:id="@+id/dropDownHealthDiseaseOutbreaks"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:inputType="none"/>
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/layoutHealthVaccineSelection"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:startIconDrawable="@drawable/rabbit_treatment"
+            android:hint="Vaccination / Treatment "
+            android:layout_marginTop="10dp"
+            style="@style/Widget.MaterialComponents.TextInputLayout.FilledBox.Dense.ExposedDropdownMenu"
+            >
+
+            <AutoCompleteTextView
+                android:id="@+id/dropDownHealthVaccineCategory"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:inputType="none"/>
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/layoutNotes"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:startIconDrawable="@drawable/rabbit_advice"
+            app:endIconMode="clear_text"
+            android:hint="Health Advice"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            android:layout_marginTop="10dp">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/textHealthRabbitNotes"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="14sp"
+                android:justificationMode="inter_word"
+                android:enabled="false"
+                android:importantForAutofill="noExcludeDescendants" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            >
+
+            <Button
+                android:id="@+id/btnHealthSubmit"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:background="@drawable/custom_button"
+                android:text="Submit"
+                app:iconGravity="textStart"
+                app:icon="@drawable/submit_icon"
+                android:textColor="@color/white"
+                app:backgroundTint="@null" />
+
+            <Button
+                android:id="@+id/btnHealthUpdate"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_below="@id/btnHealthSubmit"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/custom_button"
+                android:text="Update"
+                app:iconGravity="textStart"
+                app:icon="@drawable/update_icon"
+                android:textColor="@color/white"
+                app:backgroundTint="@null"
+                android:visibility="gone"/>
+
+            <Button
+                android:id="@+id/btnHealthClear"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/custom_button_viewer"
+                android:layout_below="@id/btnHealthUpdate"
+                android:text="Clear Fields"
+                app:iconGravity="textStart"
+                app:icon="@drawable/rabbit_clear"
+                android:textColor="@color/white"
+                app:backgroundTint="@null" />
+
+            <Button
+                android:id="@+id/btnHealthDelete"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:layout_below="@id/btnHealthClear"
+                android:background="@drawable/custom_button_delete"
+                app:iconGravity="textStart"
+                app:icon="@drawable/delete_icon"
+                app:tint="@color/white"
+                android:text="Delete"
+                android:textColor="@color/white"
+                app:backgroundTint="@null"
+                android:visibility="gone"/>
+
+            <Button
+                android:id="@+id/btnHealthViewAll"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:layout_below="@id/btnHealthDelete"
+                android:background="@drawable/custom_button_viewer"
+                android:text="View All Health"
+                app:iconGravity="textStart"
+                app:icon="@drawable/view_all_list_icon"
+                android:textColor="@color/white"
+                app:backgroundTint="@null"
+                android:visibility="gone"/>
+
+        </RelativeLayout>
+    </LinearLayout>
+
+</ScrollView>

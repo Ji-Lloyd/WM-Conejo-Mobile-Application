@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "59386056237",
+    "project_id": "wm-conejo-el-patio",
+    "storage_bucket": "wm-conejo-el-patio.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:59386056237:android:22a4891393bbbd57cbf2a4",
+        "android_client_info": {
+          "package_name": "com.capstone.wmconejoelpatio"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "59386056237-kjhvghilp5kk6uggnic4555110jk92en.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAhXiyn1MA4vsPl0yThv3g55m-iDRy23nk"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "59386056237-kjhvghilp5kk6uggnic4555110jk92en.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

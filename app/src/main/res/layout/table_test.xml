@@ -1,0 +1,205 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <TableLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@android:color/white"
+        android:layout_margin="40dp">
+
+        <!-- Table Heading -->
+
+        <TableRow
+            android:background="@color/pastel_light_blue">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="Doe Top Breeders"
+                android:textColor="@color/white"
+                android:padding="10sp"
+                android:textSize="14sp"
+                android:layout_weight="3"
+                android:gravity="center_horizontal"
+                />
+
+
+        </TableRow>
+
+        <TableRow
+            android:background="@color/green">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="Name"
+                android:textColor="@color/white"
+                android:padding="10sp"
+                android:textSize="14sp"
+                android:layout_weight="3"
+                android:gravity="center_horizontal"
+                />
+
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="Success Rate"
+                android:textColor="@android:color/white"
+                android:padding="10sp"
+                android:textSize="14sp"
+                android:layout_weight="4"
+                android:gravity="center_horizontal"
+                />
+
+
+        </TableRow>
+
+        <!-- Table Data -->
+
+        <TableRow>
+
+            <TextView
+                android:id="@+id/doeRow1Name"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="@string/row1Name"
+                android:padding="10sp"
+                android:textSize="12sp"
+                android:layout_weight="3"
+                android:gravity="center_horizontal"
+                />
+
+
+
+            <TextView
+                android:id="@+id/doeRow1SuccessRate"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="@string/row1Surname"
+                android:padding="10sp"
+                android:textSize="12sp"
+                android:layout_weight="4"
+                android:gravity="center_horizontal"
+                />
+
+        </TableRow>
+        <TableRow
+            android:background="@color/light_gray">
+
+            <TextView
+                android:id="@+id/doeRow2Name"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="@string/row2Name"
+                android:padding="10sp"
+                android:textSize="12sp"
+                android:layout_weight="3"
+                android:gravity="center_horizontal"
+                />
+
+
+
+            <TextView
+                android:id="@+id/doeRow2SuccessRate"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="@string/row2Surname"
+                android:padding="10sp"
+                android:textSize="12sp"
+                android:layout_weight="4"
+                android:gravity="center_horizontal"
+                />
+
+        </TableRow>
+
+        <TableRow>
+
+            <TextView
+                android:id="@+id/doeRow3Name"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="@string/row3Name"
+                android:padding="10sp"
+                android:textSize="12sp"
+                android:layout_weight="3"
+                android:gravity="center_horizontal"
+                />
+
+
+
+            <TextView
+                android:id="@+id/doeRow3SuccessRate"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="@string/row3Surname"
+                android:padding="10sp"
+                android:textSize="12sp"
+                android:layout_weight="4"
+                android:gravity="center_horizontal"
+                />
+
+        </TableRow>
+
+        <TableRow android:background="@color/light_gray">
+
+            <TextView
+                android:id="@+id/doeRow4Name"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="@string/row3Name"
+                android:padding="10sp"
+                android:textSize="12sp"
+                android:layout_weight="3"
+                android:gravity="center_horizontal"
+                />
+
+            <TextView
+                android:id="@+id/doeRow4SuccessRate"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="@string/row3Surname"
+                android:padding="10sp"
+                android:textSize="12sp"
+                android:layout_weight="4"
+                android:gravity="center_horizontal"
+                />
+
+        </TableRow>
+
+        <TableRow>
+
+            <TextView
+                android:id="@+id/doeRow5Name"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="@string/row3Name"
+                android:padding="10sp"
+                android:textSize="12sp"
+                android:layout_weight="3"
+                android:gravity="center_horizontal"
+                />
+
+
+
+            <TextView
+                android:id="@+id/doeRow5SuccessRate"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="@string/row3Surname"
+                android:padding="10sp"
+                android:textSize="12sp"
+                android:layout_weight="4"
+                android:gravity="center_horizontal"
+                />
+
+        </TableRow>
+
+    </TableLayout>
+
+</RelativeLayout>
+

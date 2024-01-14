@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <item
+        android:id="@+id/nav_bottom_entry"
+        android:title="Entry"
+        android:icon="@drawable/rabbit_entry"/>
+
+    <item
+        android:id="@+id/nav_bottom_feeding"
+        android:title="Feeding"
+        android:icon="@drawable/rabbit_feeding_icon"/>
+
+    <item
+        android:id="@+id/nav_bottom_floating"
+        android:title=""/>
+
+    <item
+        android:id="@+id/nav_bottom_health"
+        android:title="Health"
+        android:icon="@drawable/rabbit_health_icon"/>
+
+    <item
+        android:id="@+id/nav_bottom_breeding"
+        android:title="Breeding"
+        android:icon="@drawable/rabbit_breeding_icon"/>
+</menu>

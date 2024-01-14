@@ -1,0 +1,369 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".RabbitEntryActivity"
+    android:padding="10dp">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <androidx.appcompat.widget.SwitchCompat
+            android:id="@+id/switchImport"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Import"
+            android:layout_alignParentEnd="true"/>
+
+        <androidx.cardview.widget.CardView
+            android:layout_below="@id/switchImport"
+            android:id="@+id/rabbitImageCardView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:elevation="6dp"
+            app:cardBackgroundColor="@color/white"
+            app:cardCornerRadius="12dp"
+            android:layout_marginEnd="10dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginStart="20dp"
+            android:layout_marginBottom="10dp">
+
+            <ImageView
+                android:id="@+id/imageRabbit"
+                android:layout_width="150dp"
+                android:layout_height="150dp"
+                android:layout_centerHorizontal="true"
+                android:layout_margin="1dp"
+                android:src="@drawable/insert_image"
+                android:scaleType="centerCrop"
+                />
+
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:layout_below="@id/switchImport"
+            android:id="@+id/qrCardView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:elevation="6dp"
+            app:cardBackgroundColor="@color/white"
+            app:cardCornerRadius="12dp"
+            android:layout_marginStart="40dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="10dp"
+            android:layout_marginEnd="10dp"
+            android:layout_toEndOf="@id/rabbitImageCardView">
+
+            <ImageView
+                android:id="@+id/imageRabbitCode"
+                android:layout_width="150dp"
+                android:layout_height="150dp"
+                android:layout_centerHorizontal="true"
+                android:layout_margin="1dp"/>
+
+        </androidx.cardview.widget.CardView>
+
+
+        <com.google.android.material.textfield.TextInputLayout
+
+            android:id="@+id/layoutSire"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            android:layout_width="180dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/qrCardView"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="30dp"
+            android:hint="Sire"
+            app:endIconMode="clear_text"
+            app:startIconDrawable="@drawable/rabbit_icon">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/textEntryRabbitSire"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:importantForAutofill="noExcludeDescendants" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/layoutDam"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            android:layout_width="180dp"
+            android:layout_height="wrap_content"
+            android:layout_toEndOf="@id/layoutSire"
+            android:layout_below="@id/qrCardView"
+            android:layout_marginTop="10dp"
+            android:hint="Dam"
+            app:endIconMode="clear_text"
+            app:startIconDrawable="@drawable/rabbit_icon">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/textEntryRabbitDam"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:importantForAutofill="noExcludeDescendants" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/layoutName"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/layoutDam"
+            android:layout_marginTop="10dp"
+            android:hint="Name"
+            app:endIconMode="clear_text"
+            app:startIconDrawable="@drawable/rabbit_icon">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/textEntryRabbitName"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:importantForAutofill="noExcludeDescendants" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/layoutBirthDate"
+            style="@style/Widget.MaterialComponents.TextInputLayout.FilledBox.Dense.ExposedDropdownMenu"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/layoutName"
+            android:layout_marginTop="10dp"
+            android:hint="Date of Birth"
+            app:startIconDrawable="@drawable/birth_date_icon">
+
+            <AutoCompleteTextView
+                android:id="@+id/btnEntryBirthDate"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:inputType="none"/>
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/layoutTattoo"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            android:layout_width="180dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/layoutBirthDate"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="30dp"
+            android:hint="Ear Tattoo"
+            app:endIconMode="clear_text"
+            app:startIconDrawable="@drawable/rabbit_tattoo">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/textEntryRabbitTattoo"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:importantForAutofill="noExcludeDescendants" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/layoutWeight"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            android:layout_width="180dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/layoutBirthDate"
+            android:layout_toEndOf="@id/layoutTattoo"
+            android:layout_marginTop="10dp"
+            android:hint="Weight (KG)"
+            app:endIconMode="clear_text"
+            app:startIconDrawable="@drawable/weight_icon">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/textEntryRabbitWeight"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="numberDecimal"
+                android:importantForAutofill="noExcludeDescendants" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/layoutBreed"
+            style="@style/Widget.MaterialComponents.TextInputLayout.FilledBox.Dense.ExposedDropdownMenu"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/layoutTattoo"
+            android:layout_marginTop="10dp"
+            android:hint="Breed"
+            app:startIconDrawable="@drawable/rabbit_another_icon">
+
+            <AutoCompleteTextView
+                android:id="@+id/dropDownBreed"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:inputType="none" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/layoutOrigin"
+            style="@style/Widget.MaterialComponents.TextInputLayout.FilledBox.Dense.ExposedDropdownMenu"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/layoutBreed"
+            android:layout_marginTop="10dp"
+            android:hint="Origin"
+            app:startIconDrawable="@drawable/origin_icon">
+
+            <AutoCompleteTextView
+                android:id="@+id/dropdownOrigin"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:inputType="none" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/layoutGender"
+            style="@style/Widget.MaterialComponents.TextInputLayout.FilledBox.Dense.ExposedDropdownMenu"
+            android:layout_width="180dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/layoutOrigin"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="25dp"
+            android:hint="Gender"
+            app:startIconDrawable="@drawable/rabbit_gender"
+            >
+
+            <AutoCompleteTextView
+                android:id="@+id/dropDownGender"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:inputType="none" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/layoutPregnant"
+            style="@style/Widget.MaterialComponents.TextInputLayout.FilledBox.Dense.ExposedDropdownMenu"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/layoutGender"
+            android:layout_marginTop="10dp"
+            android:hint="Pregnant"
+            android:visibility="gone"
+            app:startIconDrawable="@drawable/drop_down_list">
+
+            <AutoCompleteTextView
+                android:id="@+id/dropdownPregnant"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:inputType="none" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/layoutStatus"
+            style="@style/Widget.MaterialComponents.TextInputLayout.FilledBox.Dense.ExposedDropdownMenu"
+            android:layout_width="190dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/layoutOrigin"
+            android:layout_toRightOf="@id/layoutGender"
+            android:layout_marginTop="10dp"
+            android:hint="Status"
+            app:startIconDrawable="@drawable/status_icon">
+
+            <AutoCompleteTextView
+                android:id="@+id/dropdownStatus"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:inputType="none" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <Button
+            android:id="@+id/btnEntrySubmit"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/layoutPregnant"
+            android:layout_marginTop="20dp"
+            android:background="@drawable/custom_button"
+            android:text="Submit"
+            app:iconGravity="textStart"
+            app:icon="@drawable/submit_icon"
+            android:textColor="@color/white"
+            app:backgroundTint="@null" />
+
+        <Button
+            android:id="@+id/btnEntryUpdate"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/btnEntrySubmit"
+            android:layout_alignParentEnd="true"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/custom_button"
+            android:text="Update"
+            app:iconGravity="textStart"
+            app:icon="@drawable/update_icon"
+            android:textColor="@color/white"
+            app:backgroundTint="@null"
+            android:visibility="gone"/>
+
+        <Button
+            android:id="@+id/btnEntryClear"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/btnEntryUpdate"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/custom_button_viewer"
+            android:text="Clear Fields"
+            app:iconGravity="textStart"
+            app:icon="@drawable/rabbit_clear"
+            android:textColor="@color/white"
+            app:backgroundTint="@null" />
+
+        <Button
+            android:id="@+id/btnEntryDelete"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/btnEntryClear"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/custom_button_delete"
+            app:iconGravity="textStart"
+            app:icon="@drawable/delete_icon"
+            android:text="Delete"
+            android:textColor="@color/white"
+            app:backgroundTint="@null"
+            android:visibility="gone"/>
+
+        <Button
+            android:id="@+id/btnEntryViewAll"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/btnEntryDelete"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/custom_button_viewer"
+            android:text="View Rabbit Master List"
+            app:iconGravity="textStart"
+            app:icon="@drawable/view_all_list_icon"
+            android:textColor="@color/white"
+            app:backgroundTint="@null"
+            android:visibility="gone"/>
+
+
+
+
+    </RelativeLayout>
+
+</ScrollView>

@@ -1,0 +1,295 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".FeedingNutritionActivity"
+    android:padding="10dp">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/layoutID"
+            android:layout_width="150dp"
+            android:layout_height="wrap_content"
+            app:endIconMode="clear_text"
+            android:hint="ID"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            app:startIconDrawable="@drawable/rabbit_id_icon"
+            android:layout_marginTop="20dp"
+            android:layout_marginEnd="20dp">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/textFeedRabbitID"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:importantForAutofill="noExcludeDescendants"
+                android:enabled="false"/>
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <Button
+            android:id="@+id/btnFeedRabbitGenerateID"
+            android:layout_width="120dp"
+            android:layout_height="wrap_content"
+            android:layout_toEndOf="@id/layoutID"
+            android:background="@drawable/custom_button"
+            android:text="Generate"
+            app:iconGravity="textStart"
+            android:textColor="@color/white"
+            android:textSize="13sp"
+            android:layout_marginTop="25dp"
+            app:backgroundTint="@null"
+            android:visibility="gone"/>
+
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/layoutFeedSelection"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:startIconDrawable="@drawable/rabbit_gender"
+            android:hint="Feed For:"
+            android:layout_marginTop="10dp"
+            style="@style/Widget.MaterialComponents.TextInputLayout.FilledBox.Dense.ExposedDropdownMenu"
+            android:layout_below="@+id/layoutID"
+            android:enabled="false">
+
+            <AutoCompleteTextView
+                android:id="@+id/dropDownCategory"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:inputType="none"/>
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/layoutName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:startIconDrawable="@drawable/rabbit_icon"
+            app:endIconMode="clear_text"
+            android:hint="Name"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            android:layout_marginTop="10dp"
+            android:layout_below="@id/layoutFeedSelection">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/textFeedRabbitName"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:importantForAutofill="noExcludeDescendants" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <Button
+            android:id="@+id/btnFeedRabbitValidate"
+            android:layout_width="120dp"
+            android:layout_height="wrap_content"
+            android:layout_toEndOf="@id/layoutName"
+            android:layout_below="@id/layoutFeedSelection"
+            android:background="@drawable/custom_button"
+            android:text="Check"
+            app:iconGravity="textStart"
+            android:textColor="@color/white"
+            android:textSize="13sp"
+            android:layout_marginTop="20dp"
+            android:layout_marginStart="20dp"
+            app:backgroundTint="@null"
+            android:visibility="gone"/>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/layoutCurrentWeight"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:startIconDrawable="@drawable/weight_icon"
+            app:endIconMode="clear_text"
+            android:hint="Current Weight (KG)"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            android:layout_marginTop="10dp"
+            android:layout_below="@id/layoutName"
+            android:enabled="false">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/textFeedRabbitCurrentWeight"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="numberDecimal"
+                android:importantForAutofill="noExcludeDescendants"/>
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/layoutGoalWeight"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:startIconDrawable="@drawable/weight_icon"
+            app:endIconMode="clear_text"
+            android:hint="Goal Weight (KG)"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            android:layout_marginTop="10dp"
+            android:layout_below="@id/layoutCurrentWeight">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/textFeedRabbitGoalWeight"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="numberDecimal"
+                android:importantForAutofill="noExcludeDescendants"/>
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/layoutFeedType"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:startIconDrawable="@drawable/feed_type_icon"
+            android:hint="Type of feed"
+            style="@style/Widget.MaterialComponents.TextInputLayout.FilledBox.Dense.ExposedDropdownMenu"
+            android:layout_marginTop="10dp"
+            android:layout_below="@id/layoutGoalWeight">
+
+            <AutoCompleteTextView
+                android:id="@+id/dropDownFeedType"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:inputType="none"/>
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/layoutFeedQuantity"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:startIconDrawable="@drawable/rabbit_quantity"
+            android:hint="Quantity (Grams)"
+            style="@style/Widget.MaterialComponents.TextInputLayout.FilledBox.Dense.ExposedDropdownMenu"
+            android:layout_marginTop="10dp"
+            android:layout_below="@id/layoutFeedType"
+            app:counterMaxLength="3"
+            app:counterEnabled="true"
+            app:counterTextColor="@color/black"
+            >
+
+            <AutoCompleteTextView
+                android:id="@+id/dropDownFeedQuantity"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:inputType="none" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/layoutFeedSchedule"
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            app:startIconDrawable="@drawable/drop_down_list"
+            android:hint="Schedule"
+            style="@style/Widget.MaterialComponents.TextInputLayout.FilledBox.Dense.ExposedDropdownMenu"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="10dp"
+            android:layout_below="@id/layoutFeedQuantity"
+            android:visibility="gone">
+
+            <AutoCompleteTextView
+                android:id="@+id/dropdownFeedSchedule"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:inputType="none" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <Button
+            android:id="@+id/btnFeedDatePicker"
+            android:layout_width="185dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/layoutFeedQuantity"
+            android:layout_toEndOf="@id/layoutFeedSchedule"
+            android:layout_marginTop="10dp"
+            android:textColor="#01181d"
+            android:enabled="false"
+            android:visibility="gone"/>
+
+        <Button
+            android:id="@+id/btnFeedSubmit"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/btnFeedDatePicker"
+            android:layout_marginTop="20dp"
+            android:background="@drawable/custom_button"
+            android:text="Submit"
+            app:iconGravity="textStart"
+            app:icon="@drawable/submit_icon"
+            android:textColor="@color/white"
+            app:backgroundTint="@null" />
+
+        <Button
+            android:id="@+id/btnFeedUpdate"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/btnFeedSubmit"
+            android:layout_alignParentEnd="true"
+            android:layout_marginTop="20dp"
+            android:layout_marginEnd="0dp"
+            android:background="@drawable/custom_button"
+            android:text="Update"
+            app:iconGravity="textStart"
+            app:icon="@drawable/update_icon"
+            android:textColor="@color/white"
+            app:backgroundTint="@null"
+            android:visibility="gone"/>
+
+        <Button
+            android:id="@+id/btnFeedClear"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/btnFeedUpdate"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/custom_button_viewer"
+            android:text="Clear Fields"
+            app:iconGravity="textStart"
+            app:icon="@drawable/rabbit_clear"
+            android:textColor="@color/white"
+            app:backgroundTint="@null" />
+
+        <Button
+            android:id="@+id/btnFeedDelete"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/btnFeedClear"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/custom_button_delete"
+            app:iconGravity="textStart"
+            app:icon="@drawable/delete_icon"
+            app:tint="@color/white"
+            android:text="Delete"
+            android:textColor="@color/white"
+            app:backgroundTint="@null"
+            android:visibility="gone"/>
+
+        <Button
+            android:id="@+id/btnFeedViewAll"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/btnFeedDelete"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/custom_button_viewer"
+            android:text="View Feeding History"
+            app:iconGravity="textStart"
+            app:icon="@drawable/view_all_list_icon"
+            android:textColor="@color/white"
+            app:backgroundTint="@null"
+            android:visibility="gone"/>
+
+
+
+    </RelativeLayout>
+
+</ScrollView>

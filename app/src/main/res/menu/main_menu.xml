@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <group android:checkableBehavior="single">
+
+        <item
+            android:id="@+id/nav_home"
+            android:title="Home"
+            android:icon="@drawable/home_icon"/>
+
+        <item
+            android:id="@+id/nav_dashboard"
+            android:title="Dashboard"
+            android:icon="@drawable/dashboard_icon"/>
+
+        <item
+            android:id="@+id/nav_qr"
+            android:title="Scan QR Code"
+            android:icon="@drawable/qr_code_scanner"/>
+
+        <item
+            android:id="@+id/nav_rabbit_list"
+            android:title="Rabbit Records"
+            android:icon="@drawable/rabbit_list_icon"/>
+
+        <item
+            android:id="@+id/nav_schedule"
+            android:title="Feeding Schedule"
+            android:icon="@drawable/drawer_alarm_icon"/>
+
+        <item android:title="Rabbit Management">
+            <menu>
+               <group android:checkableBehavior="single">
+                   <item
+                       android:id="@+id/nav_entry"
+                       android:title="Rabbit Entry"
+                       android:icon="@drawable/rabbit_entry"/>
+
+                   <item
+                       android:id="@+id/nav_feeding"
+                       android:title="Feeding and Nutrition"
+                       android:icon="@drawable/rabbit_feeding_icon"/>
+
+                   <item
+                       android:id="@+id/nav_health"
+                       android:title="Rabbit Health"
+                       android:icon="@drawable/rabbit_health_icon"/>
+
+                   <item
+                       android:id="@+id/nav_breeding"
+                       android:title="Rabbit Breeding"
+                       android:icon="@drawable/rabbit_breeding_icon"/>
+               </group>
+            </menu>
+
+
+        </item>
+
+        <item android:title="">
+            <menu>
+                <group android:checkableBehavior="single">
+                    <item
+                        android:id="@+id/nav_exit"
+                        android:title="Exit Application"
+                        android:icon="@drawable/exit_icon"/>
+                </group>
+            </menu>
+        </item>
+
+
+
+    </group>
+
+
+</menu>

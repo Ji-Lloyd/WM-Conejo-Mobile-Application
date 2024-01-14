@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <uses-permission android:name="android.permission.CAMERA" />
+
+    <uses-feature android:name="android.hardware.camera" />
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.POST_NOTIFICATIONS" />
+    <uses-permission android:name="android.permission.SCHEDULE_EXACT_ALARM" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+
+    <application
+        android:allowBackup="true"
+        android:dataExtractionRules="@xml/data_extraction_rules"
+        android:fullBackupContent="@xml/backup_rules"
+        android:icon="@drawable/wm_icon"
+        android:label="@string/app_name"
+        android:largeHeap="true"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.WMConejoElPatio"
+        tools:targetApi="31">
+        <activity
+            android:name=".RabbitPedigreeActivity"
+            android:exported="false" />
+        <activity
+            android:name=".FeedingScheduleActivity"
+            android:exported="false" />
+        <activity
+            android:name=".RabbitBreedingHistory"
+            android:exported="false" />
+        <activity
+            android:name=".RabbitBreedersActivity"
+            android:exported="false" />
+        <activity
+            android:name=".RabbitDashboardActivity"
+            android:exported="false" />
+        <activity
+            android:name=".RabbitListsActivity"
+            android:exported="false" />
+        <activity
+            android:name=".RabbitHealthHistory"
+            android:exported="false" />
+        <activity
+            android:name=".RabbitBreedingActivity"
+            android:exported="false" />
+        <activity
+            android:name=".RabbitHealthActivity"
+            android:exported="false" />
+        <activity
+            android:name="com.journeyapps.barcodescanner.CaptureActivity"
+            android:screenOrientation="fullSensor"
+            tools:replace="screenOrientation" />
+        <activity
+            android:name=".DrawerBaseActivity"
+            android:exported="false" />
+        <activity
+            android:name=".FeedingNutritionActivity"
+            android:exported="false" />
+        <activity
+            android:name=".RabbitEntryActivity"
+            android:exported="false" />
+        <activity
+            android:name=".QrCodeActivity"
+            android:exported="false" />
+        <activity
+            android:name=".RabbitEntryListActivity"
+            android:exported="false" />
+        <activity
+            android:name=".RabbitManagementActivity"
+            android:exported="false" />
+        <activity
+            android:name=".HomeActivity"
+            android:exported="false" />
+        <activity
+            android:name=".RabbitFeedingHistory"
+            android:exported="false" />
+        <activity
+            android:name=".MainActivity"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <receiver android:name=".FeedingAlarmReceiver" />
+
+        <meta-data
+            android:name="preloaded_fonts"
+            android:resource="@array/preloaded_fonts" />
+    </application>
+
+</manifest>

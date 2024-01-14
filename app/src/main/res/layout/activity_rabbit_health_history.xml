@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".RabbitHealthHistory">
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/layoutSearchFilter"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="16dp"
+        android:hint="Search here"
+        app:endIconMode="clear_text"
+        app:hintTextColor="@color/black"
+        app:startIconDrawable="@drawable/search_icon">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/textRabbitHealthListSearchFilter"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:importantForAutofill="noExcludeDescendants"
+            android:textColor="@color/black"
+            android:tooltipText="Caution: Case sensitive!"/>
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rabbitHealthRecyclerView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:layout_below="@id/layoutSearchFilter"
+        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"/>
+
+</RelativeLayout>

@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <item
+        android:id="@+id/nav_toolbar_retrieve_nutrition_document"
+        android:title=""
+        android:icon="@drawable/document_search"
+        app:showAsAction="ifRoom"/>
+    <item
+        android:id="@+id/nav_toolbar_advice"
+        android:title=""
+        android:icon="@drawable/suggestion_icon"
+        app:showAsAction="ifRoom"/>
+    <item
+        android:id="@+id/nav_toolbar_list"
+        android:title=""
+        android:icon="@drawable/toolbar_search_icon"
+        app:showAsAction="ifRoom"/>
+</menu>

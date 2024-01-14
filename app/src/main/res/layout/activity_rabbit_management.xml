@@ -1,0 +1,211 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/drawer_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".RabbitManagementActivity">
+
+        <TextView
+            android:id="@+id/tvRabbitName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textAlignment="center"
+            android:textSize="30sp"
+            android:layout_marginTop="50dp"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+                <ScrollView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:orientation="vertical"
+                            android:layout_gravity="center">
+
+                                <GridLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:layout_marginLeft="5dp"
+                                    android:layout_marginRight="5dp"
+                                    android:alignmentMode="alignMargins"
+                                    android:columnCount="2"
+                                    android:rowCount="2">
+
+                                        <androidx.cardview.widget.CardView
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:layout_rowWeight="1"
+                                            android:layout_columnWeight="1"
+                                            android:layout_margin="12dp"
+                                            app:cardCornerRadius="12dp"
+                                            android:elevation="6dp"
+                                            app:cardBackgroundColor="@color/white">
+
+                                                <LinearLayout
+                                                    android:layout_width="match_parent"
+                                                    android:layout_height="match_parent"
+                                                    android:gravity="center"
+                                                    android:orientation="vertical"
+                                                    android:padding="6dp">
+
+                                                        <ImageButton
+                                                            android:id="@+id/btnRabbitEntry"
+                                                            android:layout_width="150dp"
+                                                            android:layout_height="150dp"
+                                                            android:layout_centerHorizontal="true"
+                                                            android:backgroundTint="@color/transparent"
+                                                            android:src="@drawable/rabbit_entry"/>
+
+                                                        <TextView
+                                                            android:id="@+id/tvRabbitEntry"
+                                                            android:layout_below="@id/btnRabbitEntry"
+                                                            android:layout_centerHorizontal="true"
+                                                            android:layout_width="wrap_content"
+                                                            android:layout_height="wrap_content"
+                                                            android:text="Rabbit Entry"
+                                                            android:textColor="@color/black"
+                                                            android:textSize="20sp"
+                                                            />
+
+                                                </LinearLayout>
+
+                                        </androidx.cardview.widget.CardView>
+
+                                        <androidx.cardview.widget.CardView
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:layout_rowWeight="1"
+                                            android:layout_columnWeight="1"
+                                            android:layout_margin="12dp"
+                                            app:cardCornerRadius="12dp"
+                                            android:elevation="6dp"
+                                            app:cardBackgroundColor="@color/white">
+
+                                                <LinearLayout
+                                                    android:layout_width="match_parent"
+                                                    android:layout_height="match_parent"
+                                                    android:gravity="center"
+                                                    android:orientation="vertical"
+                                                    android:padding="6dp">
+
+                                                        <ImageButton
+                                                            android:id="@+id/btnBreedingManagement"
+                                                            android:layout_width="150dp"
+                                                            android:layout_height="150dp"
+                                                            android:layout_centerHorizontal="true"
+                                                            android:layout_below="@id/tvRabbitEntry"
+                                                            android:backgroundTint="@color/transparent"
+                                                            android:src="@drawable/rabbit_breeding_icon"/>
+
+                                                        <TextView
+                                                            android:id="@+id/tvBreedingManagement"
+                                                            android:layout_width="wrap_content"
+                                                            android:layout_height="wrap_content"
+                                                            android:text="Rabbit Breeding"
+                                                            android:textColor="@color/black"
+                                                            android:textSize="20sp"
+                                                            android:layout_centerHorizontal="true" />
+
+                                                </LinearLayout>
+
+                                        </androidx.cardview.widget.CardView>
+
+                                        <androidx.cardview.widget.CardView
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:layout_rowWeight="1"
+                                            android:layout_columnWeight="1"
+                                            android:layout_margin="12dp"
+                                            app:cardCornerRadius="12dp"
+                                            android:elevation="6dp"
+                                            app:cardBackgroundColor="@color/white">
+
+                                                <LinearLayout
+                                                    android:layout_width="match_parent"
+                                                    android:layout_height="match_parent"
+                                                    android:gravity="center"
+                                                    android:orientation="vertical"
+                                                    android:padding="6dp">
+
+                                                        <ImageButton
+                                                            android:id="@+id/btnFeedingManagement"
+                                                            android:layout_width="150dp"
+                                                            android:layout_height="150dp"
+                                                            android:layout_centerHorizontal="true"
+                                                            android:backgroundTint="@color/transparent"
+                                                            android:src="@drawable/rabbit_feeding_icon"/>
+
+                                                        <TextView
+                                                            android:id="@+id/tvFeedingManagement"
+                                                            android:layout_width="wrap_content"
+                                                            android:layout_height="wrap_content"
+                                                            android:text="Rabbit Nutrition"
+                                                            android:textColor="@color/black"
+                                                            android:textSize="20sp"
+                                                            android:layout_centerHorizontal="true"
+                                                            android:layout_below="@id/btnFeedingManagement"
+                                                            />
+
+
+                                                </LinearLayout>
+
+                                        </androidx.cardview.widget.CardView>
+
+                                        <androidx.cardview.widget.CardView
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:layout_rowWeight="1"
+                                            android:layout_columnWeight="1"
+                                            android:layout_margin="12dp"
+                                            app:cardCornerRadius="12dp"
+                                            android:elevation="6dp"
+                                            app:cardBackgroundColor="@color/white">
+
+                                                <LinearLayout
+                                                    android:layout_width="match_parent"
+                                                    android:layout_height="match_parent"
+                                                    android:gravity="center"
+                                                    android:orientation="vertical"
+                                                    android:padding="6dp">
+
+                                                        <ImageButton
+                                                            android:id="@+id/btnHealthManagement"
+                                                            android:layout_width="150dp"
+                                                            android:layout_height="150dp"
+                                                            android:layout_centerHorizontal="true"
+                                                            android:backgroundTint="@color/transparent"
+                                                            android:src="@drawable/rabbit_health_icon"/>
+
+                                                        <TextView
+                                                            android:id="@+id/tvHealthManagement"
+                                                            android:layout_width="wrap_content"
+                                                            android:layout_height="wrap_content"
+                                                            android:text="Rabbit Health"
+                                                            android:textColor="@color/black"
+                                                            android:textSize="20sp"
+                                                            android:layout_centerHorizontal="true"
+                                                            />
+
+                                                </LinearLayout>
+
+                                        </androidx.cardview.widget.CardView>
+
+                                </GridLayout>
+
+                        </LinearLayout>
+
+                </ScrollView>
+
+        </LinearLayout>
+
+
+</RelativeLayout>
