@@ -839,7 +839,7 @@ public class RabbitHealthActivity extends DrawerBaseActivity {
     }
 
     private final String stringURLEndPoint = "https://api.openai.com/v1/chat/completions";
-    private final String stringAPIKey = "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";
+    private final String stringAPIKey = "";
     private String stringOutput = "";
 
     public String rabbitNutritionAdvice;
