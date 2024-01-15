@@ -1006,7 +1006,7 @@ public class FeedingNutritionActivity extends DrawerBaseActivity implements Time
 
 
     private String stringURLEndPoint = "https://api.openai.com/v1/chat/completions";
-    private String stringAPIKey = "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";
+    private String stringAPIKey = "";
     private String stringOutput = "";
 
     public String rabbitNutritionAdvice;
